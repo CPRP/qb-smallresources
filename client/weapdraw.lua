@@ -130,6 +130,18 @@ CreateThread(function()
 					WearingHolster = true
 				elseif HolsterVariant == 5 then
 					WearingHolster = false
+				elseif HolsterVariant == 165 then
+					WearingHolster = true
+				elseif HolsterVariant == 166 then
+					WearingHolster = true
+				elseif HolsterVariant == 167 then
+					WearingHolster = true
+				elseif HolsterVariant == 168 then
+					WearingHolster = true
+				elseif HolsterVariant == 172 then
+					WearingHolster = true
+				elseif HolsterVariant == 173 then
+					WearingHolster = true
 				end
 				if CheckWeapon(newWeap) then
 					if holstered then
