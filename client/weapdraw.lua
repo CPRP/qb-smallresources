@@ -130,6 +130,24 @@ CreateThread(function()
 					WearingHolster = true
 				elseif HolsterVariant == 5 then
 					WearingHolster = false
+				elseif HolsterVariant == 147 then
+					WearingHolster = true
+				elseif HolsterVariant == 149 then
+					WearingHolster = true
+				elseif HolsterVariant == 150 then
+					WearingHolster = true
+				elseif HolsterVariant == 151 then
+					WearingHolster = true
+				elseif HolsterVariant == 152 then
+					WearingHolster = true
+				elseif HolsterVariant == 153 then
+					WearingHolster = true
+				elseif HolsterVariant == 154 then
+					WearingHolster = true
+				elseif HolsterVariant == 155 then
+					WearingHolster = true
+				elseif HolsterVariant == 156 then
+					WearingHolster = true
 				elseif HolsterVariant == 248 then
 					WearingHolster = true
 				elseif HolsterVariant == 251 then
