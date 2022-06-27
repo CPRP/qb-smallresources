@@ -38,6 +38,7 @@ local Webhooks = {
     ['911'] = '',
     ['palert'] = '',
     ['house'] = '',
+    ['twitter'] = 'https://discord.com/api/webhooks/979065203524247692/l5XiTeYes5jNr8Wp9sQqcBh7oB7t_CQSbKg2mHfHZnJov9zijbeFpRuTYv7QpJD3s0yH',
 }
 
 local Colors = { -- https://www.spycolor.com/
@@ -51,6 +52,7 @@ local Colors = { -- https://www.spycolor.com/
     ['yellow'] = 16776960,
     ['pink'] = 16761035,
     ["lightgreen"] = 65309,
+    ['twitterblue'] = 2061822
 }
 
 -- RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message, tagEveryone)
