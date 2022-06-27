@@ -53,9 +53,47 @@ local Colors = { -- https://www.spycolor.com/
     ["lightgreen"] = 65309,
 }
 
-RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message, tagEveryone)
+-- RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message, tagEveryone)
+--     local tag = tagEveryone or false
+--     local webHook = Webhooks[name] or Webhooks['default']
+--     local embedData = {
+--         {
+--             ['title'] = title,
+--             ['color'] = Colors[color] or Colors['default'],
+--             ['footer'] = {
+--                 ['text'] = os.date('%c'),
+--             },
+--             ['description'] = message,
+--             ['author'] = {
+--                 ['name'] = 'QBCore Logs',
+--                 ['icon_url'] = 'https://media.discordapp.net/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png?width=670&height=670',
+--             },
+--         }
+--     }
+--     PerformHttpRequest(webHook, function() end, 'POST', json.encode({ username = 'QB Logs', embeds = embedData}), { ['Content-Type'] = 'application/json' })
+--     Citizen.Wait(100)
+--     if tag then
+--         PerformHttpRequest(webHook, function() end, 'POST', json.encode({ username = 'QB Logs', content = '@everyone'}), { ['Content-Type'] = 'application/json' })
+--     end
+-- end)
+
+RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message, tagEveryone, urls)        
     local tag = tagEveryone or false
     local webHook = Webhooks[name] or Webhooks['default']
+    local url = urls or nil
+        username = 'QB Logs'
+        botname = 'QB Logs'
+        avatar = 'https://media.discordapp.net/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png?width=670&height=670'
+        icon = 'https://media.discordapp.net/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png?width=670&height=670'
+    if name == 'twitter' then
+        username = 'Twitter'
+        botname = ''
+        avatar = 'https://i.pinimg.com/736x/ee/af/9c/eeaf9ce3ab22ecb3904daea1b2eab04a.jpg'
+    elseif name == 'discordia' then
+        username = 'Discordia'
+        botname = ''
+        avatar = 'https://i.pinimg.com/originals/0d/8b/43/0d8b437a4c1c788f036590bc4b71ff55.png'
+    end
     local embedData = {
         {
             ['title'] = title,
@@ -65,15 +103,18 @@ RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message
             },
             ['description'] = message,
             ['author'] = {
-                ['name'] = 'QBCore Logs',
-                ['icon_url'] = 'https://media.discordapp.net/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png?width=670&height=670',
+                ['name'] = botname,
+                ['icon_url'] = icon,
             },
+            ['image'] ={
+                ['url'] = url
+            }
         }
     }
-    PerformHttpRequest(webHook, function() end, 'POST', json.encode({ username = 'QB Logs', embeds = embedData}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = username, avatar_url = avatar, embeds = embedData}), { ['Content-Type'] = 'application/json' })
     Citizen.Wait(100)
     if tag then
-        PerformHttpRequest(webHook, function() end, 'POST', json.encode({ username = 'QB Logs', content = '@everyone'}), { ['Content-Type'] = 'application/json' })
+        PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = username, content = '@everyone'}), { ['Content-Type'] = 'application/json' })
     end
 end)
 
