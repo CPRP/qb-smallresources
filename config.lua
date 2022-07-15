@@ -56,9 +56,9 @@ Config.BlacklistedScenarios = {
 }
 
 Config.BlacklistedVehs = {
-    [`SHAMAL`] = true,
-    [`LUXOR`] = true,
-    [`LUXOR2`] = true,
+    [`SHAMAL`] = false,
+    [`LUXOR`] = false,
+    [`LUXOR2`] = false,
     [`JET`] = true,
     [`LAZER`] = true,
     [`BUZZARD`] = true,
@@ -68,11 +68,11 @@ Config.BlacklistedVehs = {
     [`TITAN`] = true,
     [`RHINO`] = true,
     [`FIRETRUK`] = false,
-    [`MULE`] = true,
-    [`MAVERICK`] = true,
+    [`MULE`] = false,
+    [`MAVERICK`] = false,
     [`BLIMP`] = true,
     [`AIRTUG`] = true,
-    [`CAMPER`] = true,
+    [`CAMPER`] = false,
     [`HYDRA`] = true,
     [`OPPRESSOR`] = true,
     [`technical3`] = true,
