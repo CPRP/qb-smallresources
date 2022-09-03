@@ -181,6 +181,10 @@ CreateThread(function()
 					WearingHolster = true
 				else
 					WearingHolster = false
+				elseif HolsterVariant == 99 then
+					WearingHolster = true
+				elseif HolsterVariant == 100 then
+					WearingHolster = true
 				elseif HolsterVariant == 147 then
 					WearingHolster = true
 				elseif HolsterVariant == 149 then
