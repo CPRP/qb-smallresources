@@ -177,54 +177,10 @@ CreateThread(function()
 				loadAnimDict("weapons@pistol@")
 
 				local HolsterVariant = GetPedDrawableVariation(ped, 8)
-				if HolsterVariant == 130 or HolsterVariant == 122 or HolsterVariant == 3 or HolsterVariant == 6 or HolsterVariant == 8 then
+				if HolsterVariant == 130 or HolsterVariant == 122 or HolsterVariant == 3 or HolsterVariant == 6 or HolsterVariant == 8 then or HolsterVariant == 99 then or HolsterVariant == 100 then or HolsterVariant == 147 then or HolsterVariant == 149 then or  HolsterVariant == 150 then or HolsterVariant == 151 then or HolsterVariant == 152 then or HolsterVariant == 153 then or HolsterVariant == 154 then or HolsterVariant == 155 then or HolsterVariant == 156 then or HolsterVariant == 247 then or HolsterVariant == 251 then or HolsterVariant == 252 then or HolsterVariant == 253 then or HolsterVariant == 254 then or HolsterVariant == 257 then or HolsterVariant == 258 then or HolsterVariant == 259 then or HolsterVariant == 260 then or HolsterVariant == 264 then or HolsterVariant == 265 then
 					WearingHolster = true
 				else
 					WearingHolster = false
-				elseif HolsterVariant == 99 then
-					WearingHolster = true
-				elseif HolsterVariant == 100 then
-					WearingHolster = true
-				elseif HolsterVariant == 147 then
-					WearingHolster = true
-				elseif HolsterVariant == 149 then
-					WearingHolster = true
-				elseif HolsterVariant == 150 then
-					WearingHolster = true
-				elseif HolsterVariant == 151 then
-					WearingHolster = true
-				elseif HolsterVariant == 152 then
-					WearingHolster = true
-				elseif HolsterVariant == 153 then
-					WearingHolster = true
-				elseif HolsterVariant == 154 then
-					WearingHolster = true
-				elseif HolsterVariant == 155 then
-					WearingHolster = true
-				elseif HolsterVariant == 156 then
-					WearingHolster = true
-				elseif HolsterVariant == 247 then
-					WearingHolster = true
-				elseif HolsterVariant == 251 then
-					WearingHolster = true
-				elseif HolsterVariant == 252 then
-					WearingHolster = true
-				elseif HolsterVariant == 253 then
-					WearingHolster = true
-				elseif HolsterVariant == 254 then
-					WearingHolster = true
-				elseif HolsterVariant == 257 then
-					WearingHolster = true
-				elseif HolsterVariant == 258 then
-					WearingHolster = true
-				elseif HolsterVariant == 259 then
-					WearingHolster = true
-				elseif HolsterVariant == 260 then
-					WearingHolster = true
-				elseif HolsterVariant == 264 then
-					WearingHolster = true
-				elseif HolsterVariant == 265 then
-					WearingHolster = true
 				end
 				if CheckWeapon(newWeap) then
 					if holstered then
