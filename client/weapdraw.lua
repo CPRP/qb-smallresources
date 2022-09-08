@@ -177,7 +177,7 @@ CreateThread(function()
 				loadAnimDict("weapons@pistol@")
 
 				local HolsterVariant = GetPedDrawableVariation(ped, 8)
-				if HolsterVariant == 130 or HolsterVariant == 122 or HolsterVariant == 3 or HolsterVariant == 6 or HolsterVariant == 8 then or HolsterVariant == 99 then or HolsterVariant == 100 then or HolsterVariant == 147 then or HolsterVariant == 149 then or  HolsterVariant == 150 then or HolsterVariant == 151 then or HolsterVariant == 152 then or HolsterVariant == 153 then or HolsterVariant == 154 then or HolsterVariant == 155 then or HolsterVariant == 156 then or HolsterVariant == 247 then or HolsterVariant == 251 then or HolsterVariant == 252 then or HolsterVariant == 253 then or HolsterVariant == 254 then or HolsterVariant == 257 then or HolsterVariant == 258 then or HolsterVariant == 259 then or HolsterVariant == 260 then or HolsterVariant == 264 then or HolsterVariant == 265 then
+				if HolsterVariant == 130 or HolsterVariant == 122 or HolsterVariant == 3 or HolsterVariant == 6 or HolsterVariant == 8 or HolsterVariant == 99 or HolsterVariant == 100 or HolsterVariant == 147 or HolsterVariant == 149 or HolsterVariant == 150 or HolsterVariant == 151 or HolsterVariant == 152 or HolsterVariant == 153 or HolsterVariant == 154 or HolsterVariant == 155 or HolsterVariant == 156 or HolsterVariant == 247 or HolsterVariant == 251 or HolsterVariant == 252 or HolsterVariant == 253 or HolsterVariant == 254 or HolsterVariant == 257 or HolsterVariant == 258 or HolsterVariant == 259 or HolsterVariant == 260 or HolsterVariant == 264 or HolsterVariant == 265 then
 					WearingHolster = true
 				else
 					WearingHolster = false
