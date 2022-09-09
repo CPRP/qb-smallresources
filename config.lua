@@ -23,6 +23,20 @@ ConsumablesEat = {
     ["burger-heartstopper"] = math.random(35, 54),
     ["burger-meatfree"] = math.random(35, 54),
     ["burger-fries"] = math.random(35, 54),
+    ["apple"] = math.random(10, 20),
+    ["beef"] = math.random(35, 50),
+    ["slicedpie"] = math.random(10, 20),
+    ["corncob"] = math.random(25, 40),
+    ["canofcorn"] = math.random(35, 50),
+    ["grapes"] = math.random(10, 20),
+    ["greenpepper"] = math.random(10, 20),
+    ["chillypepper"] = math.random(10, 20),
+    ["tomato"] = math.random(10, 20),
+    ["tomatopaste"] = math.random(25, 40),
+    ["cooked_bacon"] = math.random(35, 50),
+    ["cooked_sausage"] = math.random(35, 50),
+    ["cooked_pork"] = math.random(35, 50),
+    ["cooked_ham"] = math.random(35, 50),
 }
 
 ConsumablesDrink = {
@@ -37,6 +51,9 @@ ConsumablesAlcohol = {
     ["whiskey"] = math.random(20, 30),
     ["beer"] = math.random(30, 40),
     ["vodka"] = math.random(20, 40),
+    ["apple_juice"] = math.random(25, 45),
+    ["grapejuice"] = math.random(25, 45),
+    ["hotsauce"] = math.random(10, 15),
 }
 
 ConsumablesFireworks = {
