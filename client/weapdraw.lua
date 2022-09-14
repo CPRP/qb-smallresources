@@ -97,7 +97,7 @@ local weapons = {
 
 -- Wheapons that require the Police holster animation
 local holsterableWeapons = {
-	--'WEAPON_STUNGUN',
+	'WEAPON_STUNGUN',
 	'WEAPON_PISTOL',
 	'WEAPON_PISTOL_MK2',
 	'WEAPON_COMBATPISTOL',
@@ -158,7 +158,7 @@ RegisterNetEvent('weapons:ResetHolster', function()
 end)
 
 CreateThread(function()
-	if GetResourceState('lj-inventory') == 'missing' then return end -- This part is only made to work with qb-inventory, other inventories might conflict
+	if GetResourceState('qb-inventory') == 'missing' then return end -- This part is only made to work with qb-inventory, other inventories might conflict
 	local sleep
 	while true do
 		local ped = PlayerPedId()
@@ -176,8 +176,8 @@ CreateThread(function()
 				loadAnimDict("rcmjosh4")
 				loadAnimDict("weapons@pistol@")
 
-				local HolsterVariant = GetPedDrawableVariation(ped, 8)
-				if HolsterVariant == 130 or HolsterVariant == 122 or HolsterVariant == 1 or HolsterVariant == 2 or HolsterVariant == 4 or HolsterVariant == 5 or HolsterVariant == 3 or HolsterVariant == 6 or HolsterVariant == 8 or HolsterVariant == 18 or HolsterVariant == 19 or HolsterVariant == 20 or HolsterVariant == 21 or HolsterVariant == 63 or HolsterVariant == 64 or HolsterVariant == 99 or HolsterVariant == 100 or HolsterVariant == 147 or HolsterVariant == 149 or HolsterVariant == 150 or HolsterVariant == 151 or HolsterVariant == 152 or HolsterVariant == 153 or HolsterVariant == 154 or HolsterVariant == 155 or HolsterVariant == 156 or HolsterVariant == 247 or HolsterVariant == 251 or HolsterVariant == 252 or HolsterVariant == 253 or HolsterVariant == 254 or HolsterVariant == 257 or HolsterVariant == 258 or HolsterVariant == 259 or HolsterVariant == 260 or HolsterVariant == 264 or HolsterVariant == 265 then
+				local HolsterVariant = GetPedDrawableVariation(ped, 7)
+				if HolsterVariant == 1 or HolsterVariant == 21 or HolsterVariant == 57 or HolsterVariant == 58 or HolsterVariant == 63 or HolsterVariant == 64 or HolsterVariant == 66 or HolsterVariant == 165 or HolsterVariant == 166 or HolsterVariant == 171 or HolsterVariant == 172 then
 					WearingHolster = true
 				else
 					WearingHolster = false
@@ -190,11 +190,11 @@ CreateThread(function()
 							currentHolster = GetPedDrawableVariation(ped, 7)
 							currentHolsterTexture = GetPedTextureVariation(ped, 7)
 							TaskPlayAnimAdvanced(ped, "rcmjosh4", "josh_leadout_cop2", pos.x, pos.y, pos.z, 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
-							Wait(300)
+							Wait(350)
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 2)
+								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 1)
 							end
 							currWeapon = newWeap
 							Wait(300)
@@ -220,7 +220,7 @@ CreateThread(function()
 							Wait(500)
 
 							if IsWeaponHolsterable(currWeapon) then
-								SetPedComponentVariation(ped, 7, currentHolster, currentHolsterTexture, 2)
+								SetPedComponentVariation(ped, 7, currentHolster, currentHolsterTexture, 1)
 							end
 
 							SetCurrentPedWeapon(ped, `WEAPON_UNARMED`, true)
@@ -232,7 +232,7 @@ CreateThread(function()
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 2)
+								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 1)
 							end
 
 							Wait(500)
@@ -264,7 +264,7 @@ CreateThread(function()
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 2)
+								SetPedComponentVariation(ped, 7, currentHolster == 8 and 2 or currentHolster == 1 and 3 or currentHolster == 6 and 5, currentHolsterTexture, 1)
 							end
 
 							currWeapon = newWeap
@@ -327,7 +327,7 @@ CreateThread(function()
 end)
 
 CreateThread(function()
-	if GetResourceState('lj-inventory') == 'missing' then return end -- This part is only made to work with qb-inventory, other inventories might conflict
+	if GetResourceState('qb-inventory') == 'missing' then return end -- This part is only made to work with qb-inventory, other inventories might conflict
 	local sleep
 	while true do
 		sleep = 250
