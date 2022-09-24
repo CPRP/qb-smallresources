@@ -226,7 +226,7 @@ RegisterNetEvent('seatbelt:client:UseHarness', function(ItemData) -- On Item Use
     if inveh and class ~= 8 and class ~= 13 and class ~= 14 then
         if not harnessOn then
             LocalPlayer.state:set("inv_busy", true, true)
-            QBCore.Functions.Progressbar("harness_equip", "Attaching Race Harness", 5000, false, true, {
+            QBCore.Functions.Progressbar("harness_equip", "Attaching Race Harness", 2000, false, true, {
                 disableMovement = false,
                 disableCarMovement = false,
                 disableMouse = false,
@@ -241,7 +241,7 @@ RegisterNetEvent('seatbelt:client:UseHarness', function(ItemData) -- On Item Use
             TriggerEvent('hud:client:UpdateHarness', harnessHp)
         else
             LocalPlayer.state:set("inv_busy", true, true)
-            QBCore.Functions.Progressbar("harness_equip", "Removing Race Harness", 5000, false, true, {
+            QBCore.Functions.Progressbar("harness_equip", "Removing Race Harness", 2000, false, true, {
                 disableMovement = false,
                 disableCarMovement = false,
                 disableMouse = false,
