@@ -19,11 +19,11 @@ Config.Disable = {
 }
 
 Config.Density = {
-    ['parked'] = 0.8,
-    ['vehicle'] = 0.8,
-    ['multiplier'] = 0.8,
-    ['peds'] = 0.8,
-    ['scenario'] = 0.8,
+    ['parked'] = 0.7,
+    ['vehicle'] = 0.7,
+    ['multiplier'] = 0.7,
+    ['peds'] = 0.7,
+    ['scenario'] = 0.7,
 }
 
 ConsumablesEat = {
@@ -201,5 +201,9 @@ Config.CarWash = { -- carwash
     [5] = {
         ["label"] = "Hands Free Carwash",
         ["coords"] = vector3(-699.62, -932.7, 19.01),
+    },
+    [6] = {
+        ["label"] = "East Customs Carwash",
+        ["coords"] = vector3(851.67, -2110.91, 30.58),
     }
 }
