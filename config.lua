@@ -68,6 +68,7 @@ ConsumablesAlcohol = {
     ["apple_juice"] = math.random(25, 45),
     ["grapejuice"] = math.random(25, 45),
     ["hotsauce"] = math.random(10, 15),
+    ["m-moonshine"] = math.random(20, 30),
 }
 
 ConsumablesFireworks = {
