@@ -13,8 +13,12 @@ QBCore.Commands.Add("id", "Check Your ID #", {}, false, function(source)
     TriggerClientEvent('QBCore:Notify', source,  "ID: "..source)
 end)
 
+-- QBCore.Functions.CreateUseableItem("harness", function(source, item)
+--     TriggerClientEvent('seatbelt:client:UseHarness', source, item)
+-- end)
+
 QBCore.Functions.CreateUseableItem("harness", function(source, item)
-    TriggerClientEvent('seatbelt:client:UseHarness', source, item)
+    TriggerClientEvent('brazzers-harness:client:attachHarness', source, item)
 end)
 
 RegisterNetEvent('equip:harness', function(item)
