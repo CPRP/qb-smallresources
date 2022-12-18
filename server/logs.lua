@@ -39,6 +39,7 @@ local Webhooks = {
     ['palert'] = '',
     ['house'] = '',
     ['twitter'] = 'https://discord.com/api/webhooks/979065203524247692/l5XiTeYes5jNr8Wp9sQqcBh7oB7t_CQSbKg2mHfHZnJov9zijbeFpRuTYv7QpJD3s0yH',
+    ['qbjobs'] = '',
 }
 
 local Colors = { -- https://www.spycolor.com/

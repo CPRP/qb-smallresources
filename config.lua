@@ -11,6 +11,52 @@ Config.RemoveWeaponDropsTimer = 25
 Config.DefaultPrice = 20 -- Default price for the carwash
 Config.DirtLevel = 0.1 -- Threshold for the dirt level to be counted as dirty
 Config.DisableAmbience = false -- Disabled distance sirens, distance car alarms, etc
+Config.MapText = "Server Name" -- Text shown above the map in the escape menu.
+
+-- Whether to enable or disable dispatch services
+Config.DispatchServices = {
+    [1] = false, -- Police Vehicles
+    [2] = false, -- Police Helicopters
+    [3] = false, -- Fire Department Vehicles
+    [4] = false, -- Swat Vehicles
+    [5] = false, -- Ambulance Vehicles
+    [6] = false, -- Police Motorcycles
+    [7] = false, -- Police Backup
+    [8] = false, -- Police Roadblocks
+    [9] = false, -- PoliceAutomobileWaitPulledOver
+    [10] = false, -- PoliceAutomobileWaitCruising
+    [11] = false, -- Gang Members
+    [12] = false, -- Swat Helicopters
+    [13] = false, -- Police Boats
+    [14] = false, -- Army Vehicles
+    [15] = false, -- Biker Backup
+}
+
+-- Enable or disable the wanted level
+Config.EnableWantedLevel = false
+
+-- To Set This Up visit https://forum.cfx.re/t/how-to-updated-discord-rich-presence-custom-image/157686
+Config.Discord = {
+    ["IsEnabled"] = true, -- If set to true, then discord rich presence will be enabled
+    ["ApplicationId"] = '915674222628585472', -- The discord application id
+    ["IconLarge"] = 'logo_name', -- The name of the large icon
+    ["IconLargeHoverText"] = 'This is a Large icon with text', -- The hover text of the large icon
+    ["IconSmall"] = 'small_logo_name', -- The name of the small icon
+    ["IconSmallHoverText"] = 'This is a Small icon with text', -- The hover text of the small icon
+    ["UpdateRate"] = 60000, -- How often the player count should be updated
+    ["ShowPlayerCount"] = true, -- If set to true the player count will be displayed in the rich presence
+    ["MaxPlayers"] = 48, -- Maximum amount of players
+    ["Buttons"] = {
+        {
+            text = 'First Button!',
+            url = 'fivem://connect/localhost:30120'
+        },
+        {
+            text = 'Second Button!',
+            url = 'fivem://connect/localhost:30120'
+        }
+    }
+}
 
 Config.Disable = {
     disableHudComponents = {1, 2, 3, 4, 7, 9, 13, 19, 20, 21, 22}, -- Hud Components: https://docs.fivem.net/natives/?_0x6806C51AD12B83B8
@@ -150,6 +196,11 @@ Config.BlacklistedPeds = {
     [`s_f_y_sheriff_01`] = true,
     [`s_f_y_cop_01`] = true,
     [`s_m_y_hwaycop_01`] = true,
+}
+
+Config.Objects = { -- for object removal
+    {coords = vector3(266.09,-349.35,44.74), heading = 0, length = 200, width = 200, model = "prop_sec_barier_02b"},
+    {coords = vector3(285.28,-355.78,45.13), heading = 0, length = 200, width = 200, model = "prop_sec_barier_02a"},
 }
 
 Config.Teleports = {
