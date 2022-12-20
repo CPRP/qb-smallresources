@@ -93,6 +93,13 @@ local weapons = {
 	'WEAPON_SHIV',
 	'WEAPON_KATANA',
 	'WEAPON_SLEDGEHAMMER',
+	'WEAPON_COLBATON',
+	'WEAPON_KARAMBIT',
+	'WEAPON_MP5',
+	'WEAPON_GLOCK18C',
+	'WEAPON_GLOCK22',
+	'WEAPON_AKS74',
+	'WEAPON_AK74',
 }
 
 -- Wheapons that require the Police holster animation
@@ -113,6 +120,8 @@ local holsterableWeapons = {
 	'WEAPON_M9',
 	'WEAPON_M1911',
 	'WEAPON_FNX45',
+	'WEAPON_GLOCK18C',
+	'WEAPON_GLOCK22',
 }
 
 local holstered = true
