@@ -68,7 +68,7 @@ Config.Density = {
     ['parked'] = 0.4,
     ['vehicle'] = 0.4,
     ['multiplier'] = 0.4,
-    ['peds'] = 0.4,
+    ['peds'] = 0.8,
     ['scenario'] = 0.4,
 }
 
