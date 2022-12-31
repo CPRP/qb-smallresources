@@ -141,6 +141,11 @@ local recoils = {
 	[GetHashKey("weapon_mossberg")] = 0.7,
 	[GetHashKey("weapon_remington")] = 0.7,
 	[GetHashKey("weapon_scarh")] = 0.5,
+	[GetHashKey("weapon_glock22")] = 0.3,
+	[GetHashKey("weapon_glock18c")] = 0.3,
+	[GetHashKey("weapon_mp5")] = 0.7,
+	[GetHashKey("weapon_aks74")] = 0.5,
+	[GetHashKey("weapon_ak74")] = 0.5,
 }
 
 CreateThread(function()
