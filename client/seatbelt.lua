@@ -276,7 +276,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local seatbeltOn = false
 local harnessOn = false
-local harnessHp = 20
+local harnessHp = Config.HarnessUses
 local handbrake = 0
 local sleep = 0
 local harnessData = {}
@@ -312,8 +312,9 @@ end
 
 local function ToggleSeatbelt()
     seatbeltOn = not seatbeltOn
-    TriggerEvent("seatbelt:client:ToggleSeatbelt", seatbeltOn)
-    TriggerServerEvent("InteractSound_SV:PlayOnSource", seatbeltOn and "carbuckle" or "carunbuckle", 0.25)
+    SeatBeltLoop()
+    TriggerEvent("seatbelt:client:ToggleSeatbelt")
+    TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 5.0, seatbeltOn and "carbuckle" or "carunbuckle", 0.25)
 end
 
 local function ToggleHarness()
@@ -327,6 +328,26 @@ local function ResetHandBrake()
     handbrake -= 1
 end
 
+function SeatBeltLoop()
+    CreateThread(function()
+        while true do
+            sleep = 0
+            if seatbeltOn or harnessOn then
+                DisableControlAction(0, 75, true)
+                DisableControlAction(27, 75, true)
+            end
+            if not IsPedInAnyVehicle(PlayerPedId(), false) then
+                seatbeltOn = false
+                harnessOn = false
+                TriggerEvent("seatbelt:client:ToggleSeatbelt")
+                break
+            end
+            if not seatbeltOn and not harnessOn then break end
+            Wait(sleep)
+        end
+    end)
+end
+
 -- Export
 
 function HasHarness()
@@ -336,32 +357,32 @@ end
 exports("HasHarness", HasHarness)
 
 -- Main Thread
-
-CreateThread(function()
-    while true do
-        sleep = 1000
-        if IsPedInAnyVehicle(PlayerPedId(), false) then
-            sleep = 0
-            if seatbeltOn or harnessOn then
-                if IsControlJustPressed(0, 75) then
-                    seatbeltOn = false
-                    harnessOn = false
-                end
-            end
-        else
-            seatbeltOn = false
-            harnessOn = false
-        end
-        Wait(sleep)
-    end
-end)
+            --[[removed for some reason in qb-cores version update?]]
+-- CreateThread(function()
+--     while true do
+--         sleep = 1000
+--         if IsPedInAnyVehicle(PlayerPedId(), false) then
+--             sleep = 0
+--             if seatbeltOn or harnessOn then
+--                 if IsControlJustPressed(0, 75) then
+--                     seatbeltOn = false
+--                     harnessOn = false
+--                 end
+--             end
+--         else
+--             seatbeltOn = false
+--             harnessOn = false
+--         end
+--         Wait(sleep)
+--     end
+-- end)
 
 -- Ejection Logic
 
-CreateThread(function()
-    while true do
+RegisterNetEvent('QBCore:Client:EnteredVehicle', function()
+    local playerPed = PlayerPedId()
+    while IsPedInAnyVehicle(playerPed, false) do
         Wait(0)
-        local playerPed = PlayerPedId()
         local currentVehicle = GetVehiclePedIsIn(playerPed, false)
         if currentVehicle and currentVehicle ~= false and currentVehicle ~= 0 then
             SetPedHelmet(playerPed, false)
@@ -490,6 +511,7 @@ CreateThread(function()
             currentvehicleBodyHealth = 0
             frameBodyChange = 0
             Wait(2000)
+            break
         end
     end
 end)
@@ -503,7 +525,7 @@ RegisterNetEvent('seatbelt:client:UseHarness', function(ItemData, updateInfo) --
     if inveh and class ~= 8 and class ~= 13 and class ~= 14 then
         if not harnessOn then
             LocalPlayer.state:set("inv_busy", true, true)
-            QBCore.Functions.Progressbar("harness_equip", Lang:t("progress.attach_race_harness"), 50, false, true, {
+            QBCore.Functions.Progressbar("harness_equip", Lang:t('seatbelt.use_harness_progress'), 50, false, true, {
                 disableMovement = false,
                 disableCarMovement = false,
                 disableMouse = false,
@@ -520,7 +542,7 @@ RegisterNetEvent('seatbelt:client:UseHarness', function(ItemData, updateInfo) --
             end
         else
             LocalPlayer.state:set("inv_busy", true, true)
-            QBCore.Functions.Progressbar("harness_equip", Lang:t("progress.remove_race_harness"), 50, false, true, {
+            QBCore.Functions.Progressbar("harness_equip", Lang:t('seatbelt.remove_harness_progress'), 50, false, true, {
                 disableMovement = false,
                 disableCarMovement = false,
                 disableMouse = false,
@@ -531,7 +553,7 @@ RegisterNetEvent('seatbelt:client:UseHarness', function(ItemData, updateInfo) --
             end)
         end
     else
-        QBCore.Functions.Notify(Lang:t("error.not_in_car"), 'error')
+        QBCore.Functions.Notify(Lang:t('seatbelt.no_car'), 'error')
     end
 end)
 
