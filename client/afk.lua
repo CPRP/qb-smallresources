@@ -71,3 +71,7 @@ CreateThread(function()
         end
     end
 end)
+
+RegisterNetEvent("itemimage:client:showimage", function(item) -- ADDED FOR MENUS FOR BUSINESSES
+    exports['ps-ui']:ShowImage(Config.ItemImages[item])
+end)
