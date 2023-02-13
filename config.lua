@@ -401,3 +401,13 @@ Config.CarWash = { -- carwash
         }
     }
 }
+
+Config.ItemImages = { -- ADDED FOR MENUS FOR BUSINESSES (REST IN AFK.LUA CLIENT/SERVER)
+    ['uwucafemenu1'] = "https://user-images.githubusercontent.com/99845881/217463152-e43d9fdf-2f9a-44ed-b1d1-03e229e1fbd7.png",
+    ['uwucafemenu2'] = "https://user-images.githubusercontent.com/99845881/217463151-584c8e90-7cc1-4da7-bebd-48375903add0.png",
+    ['upnatommenu'] = "https://user-images.githubusercontent.com/99845881/217463101-463b4ca4-d1d0-4a0c-a483-b03a566eac91.png",
+    ['burgershotmenu'] = "https://user-images.githubusercontent.com/99845881/217463104-8454fc20-ee9a-420b-b9fa-4355114f9299.png",
+    ['pizzathismenu'] = "https://user-images.githubusercontent.com/99845881/217463126-a65f6a53-fcdf-483b-8694-286a4b2ad104.png",
+    ['cyberbarmenu'] = "https://user-images.githubusercontent.com/99845881/217463124-bb440da1-cf41-4508-bbf0-dac24787ce07.png",
+    ['vanillamenu'] = "https://user-images.githubusercontent.com/99845881/217463155-fdf19a04-fcbd-4128-a9fa-4789acb7fbd6.png",
+}
