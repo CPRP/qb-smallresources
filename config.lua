@@ -410,4 +410,5 @@ Config.ItemImages = { -- ADDED FOR MENUS FOR BUSINESSES (REST IN AFK.LUA CLIENT/
     ['pizzathismenu'] = "https://user-images.githubusercontent.com/99845881/217463126-a65f6a53-fcdf-483b-8694-286a4b2ad104.png",
     ['cyberbarmenu'] = "https://user-images.githubusercontent.com/99845881/217463124-bb440da1-cf41-4508-bbf0-dac24787ce07.png",
     ['vanillamenu'] = "https://user-images.githubusercontent.com/99845881/217463155-fdf19a04-fcbd-4128-a9fa-4789acb7fbd6.png",
+    ['beanmachinemenu'] = "https://user-images.githubusercontent.com/99845881/218348724-56fd4ca0-8821-45a1-a636-899b69f63400.png",
 }
