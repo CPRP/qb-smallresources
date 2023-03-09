@@ -67,11 +67,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    ['parked'] = 0.2,
-    ['vehicle'] = 0.3,
-    ['multiplier'] = 0.2,
-    ['peds'] = 0.2,
-    ['scenario'] = 0.2,
+    ['parked'] = 0.3,
+    ['vehicle'] = 0.5,
+    ['multiplier'] = 0.6,
+    ['peds'] = 0.7,
+    ['scenario'] = 0.5,
 }
 
 Config.Stun = {
@@ -411,4 +411,5 @@ Config.ItemImages = { -- ADDED FOR MENUS FOR BUSINESSES (REST IN AFK.LUA CLIENT/
     ['cyberbarmenu'] = "https://user-images.githubusercontent.com/99845881/217463124-bb440da1-cf41-4508-bbf0-dac24787ce07.png",
     ['vanillamenu'] = "https://user-images.githubusercontent.com/99845881/217463155-fdf19a04-fcbd-4128-a9fa-4789acb7fbd6.png",
     ['beanmachinemenu'] = "https://user-images.githubusercontent.com/99845881/218348724-56fd4ca0-8821-45a1-a636-899b69f63400.png",
+    ['limeysmenu'] = "https://user-images.githubusercontent.com/99845881/222842405-b312eedb-7476-42eb-9334-5005e0e65c2c.png"
 }
