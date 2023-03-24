@@ -67,11 +67,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    ['parked'] = 0.3,
-    ['vehicle'] = 0.5,
-    ['multiplier'] = 0.6,
-    ['peds'] = 0.7,
-    ['scenario'] = 0.5,
+    ['parked'] = 0.8,
+    ['vehicle'] = 0.8,
+    ['multiplier'] = 0.8,
+    ['peds'] = 0.9,
+    ['scenario'] = 0.8,
 }
 
 Config.Stun = {
@@ -244,7 +244,6 @@ Config.BlacklistedVehs = {
     -- [`ruiner2`] = true,
     -- [`deluxo`] = true,
     -- [`cargoplane2`] = true,
-    -- [`voltic2`] = true,
 }
 
 Config.BlacklistedPeds = {
