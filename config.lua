@@ -67,11 +67,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    ['parked'] = 0.8,
-    ['vehicle'] = 0.8,
-    ['multiplier'] = 0.8,
-    ['peds'] = 0.9,
-    ['scenario'] = 0.8,
+    ['parked'] = 0.2,
+    ['vehicle'] = 0.4,
+    ['multiplier'] = 0.4,
+    ['peds'] = 0.2,
+    ['scenario'] = 0.0,
 }
 
 Config.Stun = {
@@ -84,7 +84,7 @@ Config.Cruise = 'mp/h'
 Config.IdleCamera = true
 Config.disableHandsupControls = {24, 25, 47, 58, 59, 63, 64, 71, 72, 75, 140, 141, 142, 143, 257, 263, 264}
 Config.DisableAmbience = true -- Disabled distance sirens, distance car alarms, etc
-Config.HarnessUses = 100
+Config.HarnessUses = 500
 Config.DamageNeeded = 100.0 -- vehiclepush 0-1000
 Config.EnableProne = false -- prone isnt recomended at this time
 Config.MapText = "Criminal's Paradise RP" -- This is the name / text shown above the map
