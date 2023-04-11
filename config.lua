@@ -71,7 +71,7 @@ Config.Density = {
     ['vehicle'] = 0.4,
     ['multiplier'] = 0.4,
     ['peds'] = 0.2,
-    ['scenario'] = 0.0,
+    ['scenario'] = 0.2,
 }
 
 Config.Stun = {
