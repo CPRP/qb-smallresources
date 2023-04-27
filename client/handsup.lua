@@ -22,3 +22,5 @@ RegisterCommand('hu', function()
 end, false)
 
 exports('getHandsup', function() return handsup end)
+
+RegisterKeyMapping('hu', 'Hands Up/Down', 'keyboard', 'X')
