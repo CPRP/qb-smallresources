@@ -67,11 +67,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    ['parked'] = 3.0,
-    ['vehicle'] = 4.0,
-    ['multiplier'] = 4.0,
-    ['peds'] = 3.0,
-    ['scenario'] = 3.0,
+    ['parked'] = 0.8,
+    ['vehicle'] = 0.8,
+    ['multiplier'] = 0.8,
+    ['peds'] = 0.8,
+    ['scenario'] = 0.8,
 }
 
 Config.Stun = {
